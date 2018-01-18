@@ -2,4 +2,4 @@ test:
   user:
     password: pass
     name: zeng
-	message: myCloud-config-test
+    message: myCloud-config-test

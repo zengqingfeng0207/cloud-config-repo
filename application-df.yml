@@ -2,5 +2,5 @@
 test:
   user:
     password: passdf
-    username: dfName5中文内
+    username: dfName5中文外
     message: myCloud-config-test-df

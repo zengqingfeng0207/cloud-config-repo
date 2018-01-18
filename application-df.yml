@@ -1,0 +1,5 @@
+test:
+  user:
+    password: passdf
+    name: dfName
+    message: myCloud-config-test-df

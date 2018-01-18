@@ -1,3 +1,4 @@
 test:
   user:
     name: zeng
+	password: pass

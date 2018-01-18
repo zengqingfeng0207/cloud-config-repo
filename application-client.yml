@@ -1,4 +1,6 @@
-
+management:
+  security:
+    enabled: false
 spring:
   application:
     name: client

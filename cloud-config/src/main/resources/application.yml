@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zengqingfeng0207/cloud-config-repo
+         # username: zengqingfeng0207
+         # password: # 因为是公共的资源，所以不需要登录  如果是svn的话 要求输入用户名密码
+         # 访问的远程文件命名 要求有且只有一个 “-” 符号，如：config-test.yml
+   

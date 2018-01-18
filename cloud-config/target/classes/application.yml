@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zengqingfeng0207/cloud-config-repo
+         # username: zengqingfeng0207
+         # password: # ��Ϊ�ǹ�������Դ�����Բ���Ҫ��¼  �����svn�Ļ� Ҫ�������û�������
+         # ���ʵ�Զ���ļ����� Ҫ������ֻ��һ�� ��-�� ��ţ��磺config-test.yml
+   

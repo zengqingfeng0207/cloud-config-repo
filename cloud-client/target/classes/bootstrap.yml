@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: cloud-client
+  cloud:
+    config:
+      uri: http://localhost:8888
+      profile: client,df
+      # application-client.yml,application-df.yml
+      name: application 
+      # GIT 标签号  默认主干master
+      # label: m1.0  

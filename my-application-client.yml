@@ -4,7 +4,6 @@ spring:
     name: client
   rabbitmq:
     host: 127.0.0.1
-    #端口号注意不是15672
     port: 5672
     username: guest
     password: guest

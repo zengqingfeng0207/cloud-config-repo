@@ -1,0 +1,5 @@
+test:
+  user:
+    password: pass
+    name: zeng
+    message: myCloud-config-test

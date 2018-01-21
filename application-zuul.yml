@@ -1,2 +1,7 @@
 server:
   port: 9000
+zuul:
+  routes:
+    baidu:
+      path: /baidu
+      url: http://www.baidu.com

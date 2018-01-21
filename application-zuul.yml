@@ -1,3 +1,5 @@
+myproperty:
+  port: 10086
 server:
   port: 9000
 zuul:

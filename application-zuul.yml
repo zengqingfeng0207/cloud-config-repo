@@ -2,6 +2,9 @@ server:
   port: 9000
 zuul:
   routes:
+    126:
+      path: /126
+      url: http://www.126.com
     baidu:
       path: /baidu
       url: https://www.baidu.com

@@ -10,6 +10,9 @@ zuul:
     126:
       path: /126
       url: http://www.126.com
+    yqd:
+      path: /yqd
+      url: http://www.yiqiandai.com
     baidu:
       path: /baidu
       url: https://www.baidu.com

@@ -1,2 +1,4 @@
 server:
-  port: 80     
+  port: 80
+myproperty:
+  port: 9999

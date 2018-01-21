@@ -4,4 +4,7 @@ zuul:
   routes:
     baidu:
       path: /baidu
-      url: http://www.baidu.com
+      url: https://www.baidu.com
+    163:
+      path: /163
+      url: http://www.163.com

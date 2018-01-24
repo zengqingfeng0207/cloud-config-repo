@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.8.88:3306/test
+    username: root
+    password: yqd123
+  session: 
+    store-type: none
+#  redis:
+#    database: 0
+#    host: 127.0.0.1
+#    port: 6379
+security: 
+  basic:
+    enabled: true
+server:
+  port: 8080

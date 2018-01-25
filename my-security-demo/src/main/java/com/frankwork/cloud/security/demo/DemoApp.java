@@ -1,6 +1,5 @@
 package com.frankwork.cloud.security.demo;
-
-import java.util.Scanner;
+ 
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoApp {
 
-	private static Scanner sc;
+//	private static Scanner sc;
 
 	public static void main(String[] args) {
 //		System.out.println("请输入端口号:");

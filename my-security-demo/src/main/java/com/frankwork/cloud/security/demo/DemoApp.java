@@ -7,8 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 @SpringBootApplication
 @RestController
+@EnableSwagger2
 public class DemoApp {
 
 //	private static Scanner sc;
@@ -19,10 +22,5 @@ public class DemoApp {
 //		String port = sc.nextLine();
 		new SpringApplicationBuilder(DemoApp.class).web(true).run(args);
 	}
-
-	@RequestMapping(name="/hello",method = RequestMethod.GET)
-	public String hello() {
-		return "hello my spring security";
-	}
-	
+ 
 }

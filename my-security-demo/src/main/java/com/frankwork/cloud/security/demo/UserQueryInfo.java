@@ -1,9 +1,13 @@
 package com.frankwork.cloud.security.demo;
 
+import io.swagger.annotations.ApiModelProperty;
+
 public class UserQueryInfo {
 
 	private String username;
+	@ApiModelProperty(value="用户年龄起始时间")
 	private Integer age;
+	@ApiModelProperty(value="用户年龄结束时间")
 	private Integer ageTo;
 	private String xxx;
 	public String getUsername() {

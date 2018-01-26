@@ -22,6 +22,10 @@ import com.frankwork.cloud.security.demo.UserQueryInfo;
 import com.frankwork.cloud.security.demo.bean.UserInfo;
 import com.frankwork.cloud.security.demo.bean.UserInfo.UserInfoNameAndPassView;
 import com.frankwork.cloud.security.demo.bean.UserInfo.UserInfoNameView;
+import com.frankwork.cloud.security.demo.exception.UserNameExistException;
+
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
  
 
 @RestController
@@ -43,6 +47,7 @@ public class UserController {
 	
 	@GetMapping("/users")
 	@JsonView(UserInfo.UserInfoNameView.class)
+	@ApiOperation(value="查询用户列表")
 	public List<UserInfo> getUserInfos(UserQueryInfo queryInfo,@PageableDefault(page=2,size=15,sort="age,desc") Pageable pageable){
 		System.out.println(ReflectionToStringBuilder.toString(queryInfo,ToStringStyle.MULTI_LINE_STYLE));
 		System.out.println(ReflectionToStringBuilder.toString(pageable,ToStringStyle.MULTI_LINE_STYLE));
@@ -64,11 +69,25 @@ public class UserController {
 		return user;
 	}
 	
-	@PostMapping
-	public UserInfo createUser(@Valid @RequestBody UserInfo user ,BindingResult errors) {
-		
-		if(errors.hasErrors()) {
-			errors.getAllErrors().stream().forEach(error -> System.out.println(error.getDefaultMessage()));
+//	@PostMapping("/user")
+//	public UserInfo createUser(@Valid @RequestBody UserInfo user ,BindingResult errors) {
+//		
+//		if(errors.hasErrors()) {
+//			errors.getAllErrors().stream().forEach(error -> System.out.println(error.getDefaultMessage()));
+//		}
+//		
+//		System.out.println(user.getId());
+//		System.out.println(user.getUsername());
+//		System.out.println(user.getPassword());
+//		user.setId(1);
+//		return user;
+//	}
+	
+	@PostMapping("/user")
+	public UserInfo createUser(@Valid @RequestBody UserInfo user) {
+		 
+		if(user.getUsername().equals("tom")) {
+			throw new UserNameExistException(user.getId());
 		}
 		
 		System.out.println(user.getId());
@@ -79,7 +98,7 @@ public class UserController {
 	}
 	
 	@DeleteMapping("/user/{id:\\d+}")
-	public void delUserInfo(@PathVariable Integer id) {
+	public void delUserInfo(@ApiParam(value="查询用户ID") @PathVariable Integer id) {
 		UserInfo user = new UserInfo();
 		user.setId(id);
 		System.out.println(user.getId());
